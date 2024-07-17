@@ -2,6 +2,8 @@
 
 # We are gonna learn about Conditional Statements, Logical Operators, Code Blocks and Scope
 
+"""
+
 
 print("Welcome to the rollercoaster!")
 height = int(input("What is your height in cm? "))
@@ -19,12 +21,15 @@ if height > 120:
     else:
         print("Adult tickets are $12.")
         bill = 12
-    wants_photo = input("Do you want a photo taken? Y or N. ")
+    wants_photo = input("Do you want a photo taken? Y or N. ")  # Adding a photo condition, if yes $3 adds to the bill
     if wants_photo == "Y":
         bill += 3
     print(f"Your final bill is {bill}")
 else:
     print("Sorry, you have to grow taller before you can ride!")
+
+"""
+
 
 
 
@@ -85,3 +90,33 @@ if year % 4 == 0:
 else:
     print("Not leap year")
 """
+
+
+# Pizza order challenge
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want?, S, M, L: ")
+add_peperroni = input("Do you want pepperoni?, Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+bill = 0
+
+# Here i can declare the size with if condition
+if size == "S":
+    bill += 15
+
+elif size == "M":
+    bill += 20
+
+elif size == "L":
+    bill += 25
+# Here is i can use a nested if statement
+if add_peperroni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill+=3
+
+        # Here is if the user chooses extra cheese for Pizza, it will add another dollar
+if extra_cheese == "Y":
+    bill+=1
+
+print(f"Your total bill is ${bill}")
